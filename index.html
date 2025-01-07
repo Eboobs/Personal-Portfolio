@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devivce-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Eboobz Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fbc0146208.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+
+                <ul>
+                    <li> <a href="#">Home</a> </li>
+                    <li> <a href="#">About</a> </li> 
+                    <li> <a href="#">What I do</a> </li> 
+                    <li> <a href="#">My Work</a> </li> 
+                    <li> <a href="#">Contact me</a> </li>                 
+                </ul>
+            </nav>
+
+            <div class="headertext">
+                <p>Frontend Developer</p>
+                <h1>Hi, I'm <span>Ebubechukwu </span> <br>Odunukwe from Nigeria</h1>
+
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------------About section---------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="aboutcol1">
+                    <img src="images/user.png">
+                </div>
+
+                <div class="aboutcol2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Enthusiastic and detail-oriented Computer Science student with foundational knowledge in programming, graphics 
+                        design, and web development. Passionate about technology and innovation, eager to apply academic learning in a 
+                        professional environment during industrial training. Driven by a vision to establish a leading gaming company in 
+                        Africa, with a focus on delivering high-quality work. Ready to contribute effectively and grow within your 
+                        organization.  
+                    </p>
+
+                    <div class="tabtitles">
+                       <p class="tablinks active" onclick="opentab('skills')">Skills</p>
+                       <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                       <p class="tablinks" onclick="opentab('education')">Education</p>
+                       <p class="tablinks" onclick="opentab('certifications')">Certifications</p>
+                    </div>
+
+                    <div class="tabcontents active-tab" id="skills">
+                        <ul>
+                            <li> <span>Web Development</span><br> Frontend development <br>  </li> 
+                            <li> <span>Graphics Design</span><br> Developing flyers and banners <br>  </li>
+                            <li> <span>Theme Page Management</span><br> Designing theme pages </li>                                                                         
+                        </ul>
+                    </div>
+
+                    <div class="tabcontents" id="experience">
+                        <ul>
+                            <li> <span>2024 - Current</span><br>Intern at ABS- CITS University Of Lagos <br>  </li>
+                            <li> <span>2021 - 2022</span><br>Apprentice at All Mobile  <br>  </li>
+                            <li> <span>2020 - 2024</span><br>Graphics Designer at Redefined Womanhood  <br>  </li>
+                            <li> <span>2016 - 2017</span><br>Intern at Kazma Concepts </li>
+                        </ul>
+                    </div>
+
+                    <div class="tabcontents" id="education">
+                        <ul>
+                            <li> <span>2021 - Current</span><br> BSC. Comp Sci. University of Benin <br>  </li>
+                            <li> <span>2017 - 2019</span><br> Undergraduate Igbobi College Yaba <br>  </li>
+                            <li> <span>2013 - 2017 </span><br> Student, International School University of Lagos </li>
+                        </ul>
+                    </div>
+
+                    <div class="tabcontents" id="certifications">
+                        <ul>
+                            <li> <span>2020</span><br> HTML Certification, SOLOLEARN <br>  </li>
+                            <li> <span>2019</span><br> CWG Coding Programme (Junior), CWGPLC <br>  </li>
+                            <li> <span>2018 </span><br> Cyber Camp IT Training, UNILAG CONSULT </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------- Services ------------------------------------------------->
+     
+    <div id="whatido">
+        <div class="container">
+            <h1 class="subtitle">What I Do</h1>
+
+        <div class="listofservices">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2> Web Development</h2>
+                <p> With a foundational understanding of front-end web development, 
+                    I specialize in creating visually appealing and functional websites</p>
+                <a href="#">Learn more</a>
+            </div>
+           
+
+            <div>
+                <i class="fa-solid fa-pencil"></i>
+                <h2> Graphics Design</h2>
+                <p> As a creative and detailed-oriented graphics designer, I specialize in crafting visually engaging content
+                    that aligns with brand identity and goals
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-hashtag"></i>
+                <h2> Theme Page Management</h2>
+                <p> I design custom, visually stunning theme pages
+                    that align with unique visions and brand identity</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <!--------------------------------PROFILE------------------------------------>
+
+    <div id="mywork">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName('tablinks');
+        var tabcontents = document.getElementsByClassName('tabcontents');
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+
+            event.currentTarget.classList.add("active");
+
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+ </html>

@@ -1,0 +1,3 @@
+Primary: Navy Blue (#1E3A8A)
+Secondary: Bright Cyan (#00BFFF)
+Accent: Vibrant Coral (#FF6F61)

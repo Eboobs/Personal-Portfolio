@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+}
+
+#header {
+    width: 100%;
+    height: 105vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+
+
+}
+
+.headertext {
+    margin-top: 20%;
+    font-size: 25px;
+}
+
+.headertext h1 {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.headertext h1 span {
+    color: #ff004f;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aboutcol1 {
+    flex-basis: 35%;
+}
+
+.aboutcol1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.aboutcol2 {
+    flex-basis: 60%;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tabtitles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tablinks {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tablinks::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tablinks.active::after{
+    width: 100%;
+}
+
+.tabcontents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tabcontents ul li span {
+    color:  #b54769;
+    font-size: 14px;
+}
+
+.tabcontents {
+    display: none;
+}
+
+.tabcontents.active-tab {
+    display: block;
+}
+
+/* --------------------------------------- SERVICES ------------------------------ */
+
+#whatido  {
+    padding: 30px 0;
+}
+
+.listofservices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.listofservices div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.listofservices div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.listofservices div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.listofservices div a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.listofservices div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+
+}
+
+/*----------------- My Work --------------- */
+
+#mywork {
+    padding: 50px 0;
+}
