@@ -12,20 +12,27 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
 
-                <ul>
-                    <li> <a href="#">Home</a> </li>
-                    <li> <a href="#">About</a> </li> 
-                    <li> <a href="#">What I do</a> </li> 
-                    <li> <a href="#">My Work</a> </li> 
-                    <li> <a href="#">Contact me</a> </li>                 
+                <div class="logo">
+                    <div>E</div>
+                    Boobz
+                </div>
+
+                <ul id="sidemenu">
+                    <li> <a href="#header">Home</a> </li>
+                    <li> <a href="#about">About</a> </li> 
+                    <li> <a href="#whatido">What I do</a> </li> 
+                    <li> <a href="#mywork">My Work</a> </li> 
+                    <li> <a href="#contact">Contact me</a> </li>
+
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>                
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
 
             <div class="headertext">
                 <p>Frontend Developer</p>
-                <h1>Hi, I'm <span>Ebubechukwu </span> <br>Odunukwe from Nigeria</h1>
+                <h1>Hi, I'm <span>Ebubechukwu </span> <br>Odunukwe</h1>
 
             </div>
         </div>
@@ -37,7 +44,7 @@
             <div class="row">
 
                 <div class="aboutcol1">
-                    <img src="images/user.png">
+                    <img src="images/aftertop.jpg">
                 </div>
 
                 <div class="aboutcol2">
@@ -137,6 +144,76 @@
     <div id="mywork">
         <div class="container">
             <h1 class="subtitle">My Work</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="images/Calculator.png" alt="">
+                    <div class="layer">
+                        <h3>Simple Calculator</h3>
+                        <p>A tool designed to perform basic mathematical operations
+                        </p>
+                        <a href="file:///C:/Users/User/Desktop/calculator/main.html"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/responsive.png" alt="">
+
+                    <div class="layer">
+                        <h3>Simple Landing Page</h3>
+                        <p>Just a simple responsive page I made with HTML and CSS.
+                        </p>
+                        <a href="http://127.0.0.1:5500/initial.html"><i class="fa-solid fa-link"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="work">
+                    <img src="images/instagram.jpg" alt="">
+
+                    <div class="layer">
+                        <h3>Daily Drive Haven</h3>
+                        <p>An Instagram theme page which I am growing
+                            and managing, hoping to monitize soon 
+                        </p>
+                        <a href="https://www.instagram.com/dailydrivehaven?igsh=MWYxN3k5dTNmc2M2NA%3D%3D&utm_source=qr "><i class="fa-solid fa-link"></i></a>
+                    </div>
+
+                </div>     
+            </div>
+
+            <a href="#" class="btn">See More</a>
+        </div>
+
+    </div>
+
+    <!----------------------CONTACT FORM--------------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contactleft">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>creationsebube@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+234 915 462 0004</p>
+                    <div class="socialicons">
+                        <a href="#"> <i class="fa-brands fa-github"></i> </a>
+                        <a href="https://wa.link/cxzvwe"> <i class="fa-brands fa-square-whatsapp"></i> </a>
+                        <a href="#"> <i class="fa-brands fa-linkedin"></i> </a>
+                    </div>
+                        <a href="images/mycv.pdf" download class="btn btn2">Download CV</a>
+
+                </div>
+                <div class="contactright">
+                    <form>
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="number" name="phonenumber" placeholder="Phone Number" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+                </div>
+            </div>
         </div>
 
     </div>
@@ -158,6 +235,18 @@
             event.currentTarget.classList.add("active");
 
             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu (){
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu (){
+            sidemenu.style.right = "-200px";
         }
     </script>
 
